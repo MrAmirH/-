@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>سوالات متداول | AmirPipe</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+document.querySelectorAll('.faq-item').forEach(item => {
+  const btn = item.querySelector('.faq-q');
+  const ans = item.querySelector('.faq-a');
+  btn.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o => {
+      o.classList.remove('open');
+      o.querySelector('.faq-a').style.maxHeight = null;
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      ans.style.maxHeight = ans.scrollHeight + 40 + 'px';
+    }
+  });
+});
+});
+</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="brand">
+      <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="20" cy="20" r="19" stroke="#c9963c" stroke-width="2"/>
+  <path d="M12 24 L18 14 L22 20 L28 12" stroke="#c9963c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <circle cx="28" cy="12" r="2" fill="#c9963c"/>
+</svg>
+      <div class="brand-name">Amir<span>Pipe</span></div>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" class="">خانه</a>
+<a href="about.html" class="">درباره ما</a>
+<a href="services.html" class="">خدمات</a>
+<a href="portfolio.html" class="">نمونه‌کارها</a>
+<a href="faq.html" class="active">سوالات متداول</a>
+<a href="contact.html" class="">تماس</a>
+
+    </nav>
+  </div>
+</header>
+<div class="wrap">
+
+<div class="page-header">
+  <p class="section-tag">سوالات متداول</p>
+  <h1 class="page-title">پیش از تماس مطالعه کنید</h1>
+</div>
+<section style="border-bottom:none;">
+  <div class="faq-item">
+      <button class="faq-q"><span>قیمت کارها چگونه تعیین می‌شود؟</span><span class="plus">+</span></button>
+      <div class="faq-a"><p>قیمت بر اساس نوع کار، متراژ و شرایط محل تعیین می‌شود. برای برآورد دقیق، کافی است عکس یا آدرس محل را ارسال کنید تا قیمت حدودی اعلام شود.</p></div>
+    </div><div class="faq-item">
+      <button class="faq-q"><span>آیا فاکتور صادر می‌کنید؟</span><span class="plus">+</span></button>
+      <div class="faq-a"><p>بله، پس از اتمام کار فاکتور کامل شامل جنس مصرفی و دستمزد ارائه می‌شود.</p></div>
+    </div><div class="faq-item">
+      <button class="faq-q"><span>از چه نوع لوله استفاده می‌شود؟</span><span class="plus">+</span></button>
+      <div class="faq-a"><p>لوله پلاستیکی پنج‌لایه (سوپر پایپ)، که در برابر فشار و حرارت مقاومت بیشتری نسبت به لوله‌های معمولی دارد.</p></div>
+    </div><div class="faq-item">
+      <button class="faq-q"><span>چقدر طول می‌کشد تا به محل اعزام شوید؟</span><span class="plus">+</span></button>
+      <div class="faq-a"><p>برای موارد اضطراری مانند نشتی، در سریع‌ترین زمان ممکن هماهنگی انجام می‌شود. برای کارهای برنامه‌ریزی‌شده، زمان مناسب از پیش تعیین می‌شود.</p></div>
+    </div><div class="faq-item">
+      <button class="faq-q"><span>آیا فقط در تهران فعالیت می‌کنید؟</span><span class="plus">+</span></button>
+      <div class="faq-a"><p>فعالیت اصلی در تهران و حومه است و خدمات به‌صورت شبانه‌روزی ارائه می‌شود.</p></div>
+    </div>
+</section>
+
+</div>
+<footer class="site-footer">© AmirPipe — زیرمجموعه‌ی خدمات ساختمانی تاسیساتی سینا برج، شماره ثبت ۳۷۲۰۵۰</footer>
+</body>
+</html>

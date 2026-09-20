@@ -102,6 +102,24 @@
 
 </div>
 
-<footer class="site-footer">© AmirPipe — زیرمجموعه‌ی خدمات ساختمانی تاسیساتی سینا برج، شماره ثبت ۳۷۲۰۵۰</footer>
+<div class="lightbox" id="lightbox"><img id="lightbox-img" src="" alt=""></div>
+
+<footer class="site-footer">© AmirPipe — زیرمجموعه‌ی خدمات ساختمانی تاسیساتی سینا برج بیژن، شماره ثبت ۳۷۲۰۵۰</footer>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  document.querySelectorAll('.photo-grid img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('open');
+    });
+  });
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('open');
+    lightboxImg.src = '';
+  });
+</script>
+
 </body>
 </html>

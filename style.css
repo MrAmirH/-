@@ -103,6 +103,26 @@ section { padding: 46px 0; border-bottom: 1px solid var(--line); }
 }
 .also-note strong { color: var(--paper); }
 
+.step-grid { display: flex; flex-direction: column; gap: 12px; }
+.step-card {
+  display: flex; align-items: flex-start; gap: 16px; padding: 18px; background: var(--ink-soft);
+  border: 1px solid var(--line); border-radius: 12px;
+}
+.step-num {
+  width: 34px; height: 34px; flex-shrink: 0; border-radius: 999px; background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+  color: #16181c; font-weight: 900; font-size: 15px; display: flex; align-items: center; justify-content: center;
+}
+.step-text h4 { font-size: 15px; font-weight: 700; margin: 4px 0 5px; }
+.step-text p { font-size: 13.5px; color: var(--muted); margin: 0; line-height: 1.8; }
+
+.quote-banner {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  padding: 22px; background: linear-gradient(135deg, rgba(201,150,60,0.14), rgba(111,145,134,0.1));
+  border: 1px solid var(--gold); border-radius: 14px; margin-top: 8px;
+}
+.quote-banner p { font-size: 14.5px; color: var(--paper); margin: 0; line-height: 1.85; max-width: 480px; }
+.quote-banner .btn { flex-shrink: 0; }
+
 .lightbox {
   position: fixed; inset: 0; background: rgba(10,11,13,0.92); z-index: 999;
   display: none; align-items: center; justify-content: center; padding: 24px;

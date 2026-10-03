@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>نمونه‌کارها | AmirPipe</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="brand"><img src="assets/logo.png" alt="لوگو" style="width:34px;height:34px;object-fit:contain;">
+      <div class="brand-name">Amir<span>Pipe</span></div>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">خانه</a>
+      <a href="about.html">درباره ما</a>
+      <a href="services.html">خدمات</a>
+      <a href="portfolio.html" class="active">نمونه‌کارها</a>
+      <a href="faq.html">سوالات متداول</a>
+      <a href="contact.html">تماس</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+<div class="page-header">
+  <p class="section-tag">نمونه‌کارها</p>
+  <h1 class="page-title">پروژه‌های انجام‌شده</h1>
+  <p class="page-lead">نمونه‌ی واقعی از کارهای اجراشده، به تفکیک نوع خدمت.</p>
+</div>
+
+<section style="border-bottom:none;">
+
+  <div class="cat-block">
+    <div class="cat-title">نصب پمپ</div>
+    <div class="photo-grid">
+      <img src="assets/portfolio/pump-1.jpg" alt="نصب پمپ آب">
+      <img src="assets/portfolio/pump-2.jpg" alt="نصب پمپ آب">
+      <img src="assets/portfolio/pump-3.jpg" alt="نصب پمپ آب">
+      <img src="assets/portfolio/pump-4.jpg" alt="نصب پمپ آب">
+    </div>
+  </div>
+
+  <div class="cat-block">
+    <div class="cat-title">لوله‌کشی فاضلاب (لوله پلیکا)</div>
+    <div class="photo-grid">
+      <img src="assets/portfolio/sewage-1.jpg" alt="لوله‌کشی فاضلاب">
+      <img src="assets/portfolio/sewage-2.jpg" alt="لوله‌کشی فاضلاب">
+      <img src="assets/portfolio/sewage-3.jpg" alt="لوله‌کشی فاضلاب">
+      <img src="assets/portfolio/sewage-4.jpg" alt="لوله‌کشی فاضلاب">
+      <img src="assets/portfolio/sewage-5.jpg" alt="لوله‌کشی فاضلاب">
+    </div>
+  </div>
+
+  <div class="cat-block">
+    <div class="cat-title">کلکتوری آب سرد و گرم و گرمایش (لوله پنج‌لایه)</div>
+    <div class="photo-grid">
+      <img src="assets/portfolio/manifold-1.jpg" alt="لوله‌کشی کلکتوری">
+      <img src="assets/portfolio/manifold-2.jpg" alt="لوله‌کشی کلکتوری">
+      <img src="assets/portfolio/manifold-3.jpg" alt="لوله‌کشی کلکتوری">
+    </div>
+  </div>
+
+  <div class="cat-block">
+    <div class="cat-title">لوله‌کشی کنتور تفکیکی (لوله تک‌لایه)</div>
+    <div class="photo-grid">
+      <img src="assets/portfolio/meter-1.jpg" alt="لوله‌کشی کنتور تفکیکی">
+      <img src="assets/portfolio/meter-2.jpg" alt="لوله‌کشی کنتور تفکیکی">
+      <img src="assets/portfolio/meter-3.jpg" alt="لوله‌کشی کنتور تفکیکی">
+    </div>
+  </div>
+
+  <div class="cat-block">
+    <div class="cat-title">گرمایش از کف</div>
+    <div class="photo-grid">
+      <img src="assets/portfolio/floorheat-1.jpg" alt="گرمایش از کف">
+      <img src="assets/portfolio/floorheat-2.jpg" alt="گرمایش از کف">
+      <img src="assets/portfolio/floorheat-3.jpg" alt="گرمایش از کف">
+    </div>
+  </div>
+
+  <div class="cat-block">
+    <div class="cat-title">نصب والهنگ</div>
+    <div class="photo-grid">
+      <img src="assets/portfolio/wallhung-1.jpg" alt="نصب والهنگ">
+    </div>
+  </div>
+
+  
+
+</section>
+
+</div>
+
+<div class="lightbox" id="lightbox"><img id="lightbox-img" src="" alt=""></div>
+
+<footer class="site-footer">© AmirPipe — زیرمجموعه‌ی خدمات ساختمانی تاسیساتی سینا برج بیژن، شماره ثبت ۳۷۲۰۵۰</footer>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  document.querySelectorAll('.photo-grid img').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('open');
+    });
+  });
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('open');
+    lightboxImg.src = '';
+  });
+</script>
+
+</body>
+</html>

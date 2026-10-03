@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>سوالات متداول | AmirPipe</title>
+<meta name="description" content="امیرپایپ؛ خدمات تخصصی لوله‌کشی و تاسیسات ساختمان در تهران، اجرای پمپ آب، گرمایش از کف و رفع نشتی.">
+<meta name="theme-color" content="#0d1630">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;800;900&display=swap">
 <link rel="stylesheet" href="style.css">
 <script>
@@ -15,10 +17,12 @@ document.querySelectorAll('.faq-item').forEach(item => {
     const isOpen = item.classList.contains('open');
     document.querySelectorAll('.faq-item.open').forEach(o => {
       o.classList.remove('open');
+      o.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
       o.querySelector('.faq-a').style.maxHeight = null;
     });
     if (!isOpen) {
       item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
       ans.style.maxHeight = ans.scrollHeight + 40 + 'px';
     }
   });
@@ -29,7 +33,7 @@ document.querySelectorAll('.faq-item').forEach(item => {
 <body>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a href="index.html" class="brand"><img src="assets/logo.png" alt="لوگو" style="width:34px;height:34px;object-fit:contain;">
+    <a href="index.html" class="brand"><img src="assets/amirpipe-logo-original.jpeg" alt="لوگو" >
       <div class="brand-name">Amir<span>Pipe</span></div>
     </a>
     <nav class="main-nav">
@@ -51,19 +55,19 @@ document.querySelectorAll('.faq-item').forEach(item => {
 </div>
 <section style="border-bottom:none;">
   <div class="faq-item">
-      <button class="faq-q"><span>قیمت کارها چگونه تعیین می‌شود؟</span><span class="plus">+</span></button>
+      <button class="faq-q" type="button" aria-expanded="false"><span>قیمت کارها چگونه تعیین می‌شود؟</span><span class="plus">+</span></button>
       <div class="faq-a"><p>قیمت بر اساس نوع کار، متراژ و شرایط محل تعیین می‌شود. برای برآورد دقیق، کافی است عکس یا آدرس محل را ارسال کنید تا قیمت حدودی اعلام شود.</p></div>
     </div><div class="faq-item">
-      <button class="faq-q"><span>آیا فاکتور صادر می‌کنید؟</span><span class="plus">+</span></button>
+      <button class="faq-q" type="button" aria-expanded="false"><span>آیا فاکتور صادر می‌کنید؟</span><span class="plus">+</span></button>
       <div class="faq-a"><p>بله، پس از اتمام کار فاکتور کامل شامل جنس مصرفی و دستمزد ارائه می‌شود.</p></div>
     </div><div class="faq-item">
-      <button class="faq-q"><span>از چه نوع لوله استفاده می‌شود؟</span><span class="plus">+</span></button>
+      <button class="faq-q" type="button" aria-expanded="false"><span>از چه نوع لوله استفاده می‌شود؟</span><span class="plus">+</span></button>
       <div class="faq-a"><p>لوله پلاستیکی پنج‌لایه (سوپر پایپ)، که در برابر فشار و حرارت مقاومت بیشتری نسبت به لوله‌های معمولی دارد.</p></div>
     </div><div class="faq-item">
-      <button class="faq-q"><span>چقدر طول می‌کشد تا به محل اعزام شوید؟</span><span class="plus">+</span></button>
+      <button class="faq-q" type="button" aria-expanded="false"><span>چقدر طول می‌کشد تا به محل اعزام شوید؟</span><span class="plus">+</span></button>
       <div class="faq-a"><p>برای موارد اضطراری مانند نشتی، در سریع‌ترین زمان ممکن هماهنگی انجام می‌شود. برای کارهای برنامه‌ریزی‌شده، زمان مناسب از پیش تعیین می‌شود.</p></div>
     </div><div class="faq-item">
-      <button class="faq-q"><span>آیا فقط در تهران فعالیت می‌کنید؟</span><span class="plus">+</span></button>
+      <button class="faq-q" type="button" aria-expanded="false"><span>آیا فقط در تهران فعالیت می‌کنید؟</span><span class="plus">+</span></button>
       <div class="faq-a"><p>فعالیت اصلی در تهران است و خدمات به‌صورت شبانه‌روزی ارائه می‌شود.</p></div>
     </div>
 </section>
